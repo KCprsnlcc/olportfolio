@@ -127,6 +127,20 @@
 </html>
 
 <?php
+// Database connection parameters
+$servername = "localhost"; // Replace with your database server name or IP address
+$username = "root"; // Replace with your database username
+$password = ""; // Replace with your database password
+$database = "sulaimanp"; // Replace with your database name
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 // Check if the form is submitted
 if (isset($_POST['login'])) {
     // Get entered username and password
@@ -167,10 +181,10 @@ if (isset($_POST['login'])) {
                 header('Location: khadaffe/index.php');
                 break;
             case 'Alfraskhan_Portfolio':
-                header('Location: alfraskhan/index.php');
+                header('Location: ../alfraskhan/index.php');
                 break;
             case 'Appled_Portfolio':
-                header('Location: apple/index.php');
+                header('Location: ../apple/index.php');
                 break;
             default:
                 echo 'Invalid user';
@@ -180,7 +194,8 @@ if (isset($_POST['login'])) {
         echo 'Invalid username or password';
     }
 }
-include 'connection/db.php';
+
 ?>
+
 
 

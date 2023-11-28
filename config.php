@@ -23,7 +23,7 @@ session_start();
 
 // Website Configuration
 $siteTitle = 'Online Portfolio';
-$siteUrl = 'http://localhost/portfolio'; // Replace with your website URL
+$siteUrl = 'http://localhost/olportfolio'; // Replace with your website URL
 
 // Paths
 define('ROOT_PATH', __DIR__);
